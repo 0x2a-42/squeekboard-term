@@ -1,0 +1,105 @@
+---
+outlines:
+    default:   { width: 63,    height: 64 }
+    action:    { width: 63,    height: 64 }
+    altline:   { width: 81,    height: 64 }
+    spaceline: { width: 252,   height: 64 }
+    small:     { width: 78.75, height: 50 }
+    bskey:     { width: 108,   height: 64 }
+
+views:
+    base:
+        - "Esc Tab Ctrl Alt ← ↓ ↑ →"
+        - "1 2 3 4 5 6 7 8 9 0"
+        - "q w e r t z u i o p"
+        - "a s d f g h j k l"
+        - "Shift_L y x c v b n m BackSpace"
+        - "show_symbols , space . - Return"
+    upper:
+        - "Esc Tab Ctrl Alt Home PgDn PgUp End"
+        - "! \" # $ * & / ( ) ="
+        - "Q W E R T Z U I O P"
+        - "A S D F G H J K L"
+        - "Shift_L Y X C V B N M BackSpace"
+        - "show_symbols ; space : _ Return"
+    symbols:
+        - "Esc Tab Ctrl Alt ← ↓ ↑ →"
+        - "1 2 3 4 5 6 7 8 9 0"
+        - "# ` ' \" { } < > [ ]"
+        - "+ - * / ( ) & | ~ ^"
+        - "preferences @ % $ ! ? \\ = BackSpace"
+        - "show_letters ; space : _ Return"
+
+buttons:
+    Shift_L:
+        action:
+            locking:
+                lock_view: "upper"
+                unlock_view: "base"
+        outline: "altline"
+        icon: "key-shift"
+    BackSpace:
+        outline: "bskey"
+        icon: "edit-clear-symbolic"
+        action: erase
+    preferences:
+        action: "show_prefs"
+        outline: "altline"
+        icon: "keyboard-mode-symbolic"
+    show_symbols:
+        action:
+            set_view: "symbols"
+        outline: "altline"
+        label: "{ }"
+    show_letters:
+        action:
+            set_view: "base"
+        outline: "altline"
+        label: "ABC"
+    space:
+        outline: "spaceline"
+        text: " "
+    Return:
+        outline: "bskey"
+        icon: "key-enter"
+        keysym: "Return"
+    Esc:
+        outline: "small"
+        keysym: "Escape"
+        label: "Esc"
+    Tab:
+        outline: "small"
+        keysym: "Tab"
+        label: "Tab"
+    Home:
+        outline: "small"
+        keysym: "Home"
+    End:
+        outline: "small"
+        keysym: "End"
+    PgUp:
+        outline: "small"
+        keysym: "Page_Up"
+    PgDn:
+        outline: "small"
+        keysym: "Page_Down"
+    "↑":
+        outline: "small"
+        keysym: "Up"
+    "↓":
+        outline: "small"
+        keysym: "Down"
+    "←":
+        outline: "small"
+        keysym: "Left"
+    "→":
+        outline: "small"
+        keysym: "Right"
+    Ctrl:
+        modifier: "Control"
+        outline: "small"
+        label: "Ctrl"
+    Alt:
+        modifier: "Alt"
+        outline: "small"
+        label: "Alt"
